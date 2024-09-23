@@ -29,10 +29,17 @@ public class Main {
             System.out.println("não divisivel");
         }
     }
+
+    
     //perguntas:
-    //não entendi o conceito de retorno , porque o sout é divisivel naõ é um retorno?
+    //*****Conceito de retorno , porque o sout é divisivel naõ é um retorno?**********************************
+    // print just shows the human user a string representing what is going on inside the computer.
+    // The computer cannot make use of that printing. 
+    // return is how a function gives back a value.
+    // This value is often unseen by the human user, but it can be used by the computer in further functions.       
+    // https://www.codecademy.com/forum_questions/518ffbfeb3f05c44fe001395;
 
-
+     
     // receba um numero e imprima a tabuada
     public  static void Tabuada (int numero){
         if(numero <= 0){return;}

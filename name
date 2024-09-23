@@ -1,0 +1,58 @@
+import java.util.Scanner;
+
+//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
+// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+public class Main {
+
+    public static void validaNotas(float media, float frequencia) {
+
+        if (frequencia < 75) {
+            System.out.println("Frequencia insuficiente para ser aprovado");
+        }
+        if (media > 5 && media < 7) {
+            System.out.println("Sua média é: "+ media +"\nDeverá fazer prova substitutiva");
+        }
+        else  if (media < 5) {
+            System.out.println("Sua média é: "+ media +"\nReprovado");
+
+        }
+        else{
+            System.out.println("Aprovado");
+        }
+    }
+
+    public  static float media (float[] vet) {
+        float acc = 0;
+        for (float v : vet) {
+            acc += v;
+
+        }
+        System.out.println(acc);
+        return (float) acc /(vet.length + 1);
+    }
+    public  static float mediaNotas() {
+        int tamanhoNota = 4;
+        float [] notas = new float[tamanhoNota];
+
+        Scanner leia = new Scanner(System.in);
+        for (int i = 0; i < tamanhoNota ; i++) {
+            System.out.println("Digite suas notas");
+            int nota = leia.nextInt();
+            notas[i] = nota;
+        }
+
+        for (int i = 0; i < tamanhoNota ; i++) {
+            System.out.println(notas[i]);
+        }
+        System.out.println(media(notas));
+        return media(notas);
+    }
+
+
+    public static void main(String[] args) {
+    Scanner leia = new Scanner(System.in);
+        System.out.println("Digite sua frequencia: ");
+        float freq = leia.nextFloat();
+    validaNotas(mediaNotas(), freq);
+    }
+}
